@@ -9,7 +9,7 @@ new_date_input.py中为读取每个训练及测试batch的代码
 new_model.py中为模型主体，在全连接的基础上增加了LSTM的模块，并且用concat链接了相邻全连接层，最后为softmax层输出标签概率
 
 
-train_and_test.py中封装了训练及测试相应的函数，训练使用了Adam优化器，学习率为1e^-3,batch为4，训练数据为248个，测试数据为8个。
+train_and_test.py中封装了训练及测试相应的函数，训练使用了Adam优化器，学习率为3e^-3,batch为4，训练数据为248个，测试数据为8个，每轮学习率衰减系数为0.8。
 
 train.py和test.py分别为训练与测试的代码，train中可以设置训练轮数，训练后会在本地生成checkpoint和tensorboard两个文件夹，分别对应保存的模型和训练中loss与acc的可视化数据
 
