@@ -10,7 +10,7 @@ CHECKFILE = './checkpoint/model.ckpt'
 lr=3e-3
 decay=0.8
 max_grad_norm=10
-N=128
+N=8
 classes=2
 
 def train1(max_step):
