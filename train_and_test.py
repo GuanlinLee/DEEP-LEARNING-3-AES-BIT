@@ -1,7 +1,7 @@
 import tensorflow as tf
 import  numpy as np
 import new_data_input as data_input
-import new_model as model
+import new_branch_2 as model
 from time import  time
 
 batchsize=4
