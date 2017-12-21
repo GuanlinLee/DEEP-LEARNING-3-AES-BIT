@@ -7,8 +7,8 @@ from time import  time
 batchsize=4
 length=16
 CHECKFILE = './checkpoint/model.ckpt'
-lr=5e-4
-decay=1.0
+lr=3e-3
+decay=0.8
 max_grad_norm=10
 N=8
 classes=2
