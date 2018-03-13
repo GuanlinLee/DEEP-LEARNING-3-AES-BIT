@@ -98,5 +98,5 @@ normalizer_fn=tf.contrib.layers.batch_norm,                                     
  scope=scope + '35')
         out = tf.nn.softmax(fc35)
 
-        return out
+        return fc35
 
