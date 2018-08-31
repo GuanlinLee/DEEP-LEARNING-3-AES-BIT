@@ -38,7 +38,9 @@ def train1(max_step):
 
     cesummary = tf.summary.scalar(name='loss', tensor=loss)
     accsummary = tf.summary.scalar(name='acc', tensor=acc)
-    train_step=tf.train.AdamOptimizer(lr).minimize(loss)#apply_gradients(zip(grads, tvars))
+    update_ops = tf.get_collection(tf.GraphKeys.UPDATE_OPS)
+    with tf.control_dependencies(update_ops):
+        train_step=tf.train.AdamOptimizer(lr).minimize(loss)#apply_gradients(zip(grads, tvars))
 
     merged = tf.summary.merge_all()
     with tf.Session() as sess:
